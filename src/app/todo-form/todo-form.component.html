@@ -1,0 +1,21 @@
+<div class="input-group mb-3 w-100">
+  <!-- Input for name- Template Driven -->
+  <input type="text" 
+  name="title" 
+  placeholder="Enter title"
+  class="form-control"
+  [(ngModel)]="todoTitle"
+  >
+
+  <div class="input-group-append">
+    <button class="btn btn-success"
+    (click)="handleAdd()">Add Todo</button>
+  </div>
+</div>
+
+<div *ngIf="alertModal" class="text-white">
+  Please fill the title!
+</div>
+
+<!-- Two Way binding -->
+<!-- <p class="text-white">{{ todoTitle }}</p> -->
